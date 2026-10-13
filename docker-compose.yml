@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  sovereign-agent-engine:
+    build: .
+    container_name: sovereign_agent_engine
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - SOVEREIGN_JURISDICTION=UAE_GCC
+      - DOCTRINE=NO_EVIDENCE_NO_DONE
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
