@@ -1,4 +1,7 @@
 # Sovereign AI Agent Engine (Python / FastAPI + Ollama)
+
+[![CI](https://github.com/NoorSiddiquiDubai/sovereign-ai-agent-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/NoorSiddiquiDubai/sovereign-ai-agent-engine/actions/workflows/ci.yml)
+
 > **Author & Architect:** Noor Siddiqui (Founder, IZN AI · Director, Agro National)  
 > **Production Standard:** Sovereign Enterprise AI Infrastructure for GCC & Global Enterprises  
 > **Operating Doctrine:** *"No Evidence, No Done."*
@@ -66,6 +69,31 @@ Rule: *If a test fails, the build is not certified. No evidence, no done.*
 
 ---
 
-## 📜 License & Provenance
+## How to Run
+
+### Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Run tests
+```bash
+pytest --tb=short
+```
+
+### Run the engine locally
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### Run with Docker
+```bash
+docker build -t sovereign-ai-agent-engine .
+docker run -p 8000:8000 sovereign-ai-agent-engine
+```
+
+---
+
+## License & Provenance
 Authored by Noor Siddiqui. Part of the IZN AI Sovereign Engineering Suite.  
 Licensed under the MIT License.
