@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/NoorSiddiquiDubai/sovereign-ai-agent-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/NoorSiddiquiDubai/sovereign-ai-agent-engine/actions/workflows/ci.yml)
 
-> **Author & Architect:** Noor Siddiqui (Founder, IZN AI · Director, Agro National)  
+> **Author & Architect:** Noor Siddiqui (AI Innovation Leader · Founder, IZN AI · Director, Agro National)  
 > **Production Standard:** Sovereign Enterprise AI Infrastructure for GCC & Global Enterprises  
 > **Operating Doctrine:** *"No Evidence, No Done."*
 
@@ -37,39 +37,12 @@ Unlike brittle OpenAI API wrappers, this engine operates on private open-weights
 
 ---
 
-## 🚀 Quickstart
+## How to Run
 
 ### Prerequisites
 - Python 3.10+
 - Docker & Docker Compose
-- Local Ollama instance (or remote sovereign Ollama host)
-
-### Local Run
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
-
-# 2. Run the engine
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-### Dockerized Production Deployment
-```bash
-docker compose up -d --build
-```
-
----
-
-## 🧪 Deterministic Verification
-Every build is certified using automated end-to-end tests:
-```bash
-pytest tests/ -v
-```
-Rule: *If a test fails, the build is not certified. No evidence, no done.*
-
----
-
-## How to Run
+- Local Ollama instance (or a remote self-hosted Ollama host)
 
 ### Install dependencies
 ```bash
@@ -80,6 +53,7 @@ pip install -r requirements.txt
 ```bash
 pytest --tb=short
 ```
+Rule: *If a test fails, the build is not certified. No evidence, no done.*
 
 ### Run the engine locally
 ```bash
@@ -88,8 +62,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ### Run with Docker
 ```bash
-docker build -t sovereign-ai-agent-engine .
-docker run -p 8000:8000 sovereign-ai-agent-engine
+docker compose up -d --build
 ```
 
 ---
